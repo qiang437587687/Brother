@@ -13,6 +13,9 @@
 		1FF1D8591C042F9500DAEDC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1D8581C042F9500DAEDC2 /* Assets.xcassets */; };
 		1FF1D85C1C042F9500DAEDC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1D85A1C042F9500DAEDC2 /* LaunchScreen.storyboard */; };
 		1FF1D8641C04316D00DAEDC2 /* GlobalFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1D8631C04316D00DAEDC2 /* GlobalFile.swift */; };
+		1FF1D8691C0465C800DAEDC2 /* FirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1D8681C0465C800DAEDC2 /* FirstCell.swift */; };
+		1FF1D86C1C04664800DAEDC2 /* FirstCell_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1D86A1C04664800DAEDC2 /* FirstCell_Test.swift */; };
+		1FF1D86D1C04664800DAEDC2 /* FirstCell_Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1D86B1C04664800DAEDC2 /* FirstCell_Test.xib */; };
 		EBC1C5DE59BB8CB30F662E73 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A087ABE1367E80ED986C14B5 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		1FF1D85B1C042F9500DAEDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FF1D85D1C042F9500DAEDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF1D8631C04316D00DAEDC2 /* GlobalFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFile.swift; sourceTree = "<group>"; };
+		1FF1D8681C0465C800DAEDC2 /* FirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCell.swift; sourceTree = "<group>"; };
+		1FF1D86A1C04664800DAEDC2 /* FirstCell_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCell_Test.swift; sourceTree = "<group>"; };
+		1FF1D86B1C04664800DAEDC2 /* FirstCell_Test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstCell_Test.xib; sourceTree = "<group>"; };
 		61A33482C0216D929E30A4D7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		72DFD031EF734321884E45F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A087ABE1367E80ED986C14B5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +69,7 @@
 		1FF1D8501C042F9500DAEDC2 /* Brother */ = {
 			isa = PBXGroup;
 			children = (
+				1FF1D8651C0465A000DAEDC2 /* Views */,
 				1FF1D8511C042F9500DAEDC2 /* AppDelegate.swift */,
 				1FF1D8531C042F9500DAEDC2 /* ViewController.swift */,
 				1FF1D8631C04316D00DAEDC2 /* GlobalFile.swift */,
@@ -72,6 +79,16 @@
 				1FF1D85D1C042F9500DAEDC2 /* Info.plist */,
 			);
 			path = Brother;
+			sourceTree = "<group>";
+		};
+		1FF1D8651C0465A000DAEDC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FF1D8681C0465C800DAEDC2 /* FirstCell.swift */,
+				1FF1D86A1C04664800DAEDC2 /* FirstCell_Test.swift */,
+				1FF1D86B1C04664800DAEDC2 /* FirstCell_Test.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		58C39658C60893F26C651612 /* Frameworks */ = {
@@ -154,6 +171,7 @@
 			files = (
 				1FF1D85C1C042F9500DAEDC2 /* LaunchScreen.storyboard in Resources */,
 				1FF1D8591C042F9500DAEDC2 /* Assets.xcassets in Resources */,
+				1FF1D86D1C04664800DAEDC2 /* FirstCell_Test.xib in Resources */,
 				1FF1D8571C042F9500DAEDC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +233,9 @@
 			files = (
 				1FF1D8641C04316D00DAEDC2 /* GlobalFile.swift in Sources */,
 				1FF1D8541C042F9500DAEDC2 /* ViewController.swift in Sources */,
+				1FF1D8691C0465C800DAEDC2 /* FirstCell.swift in Sources */,
 				1FF1D8521C042F9500DAEDC2 /* AppDelegate.swift in Sources */,
+				1FF1D86C1C04664800DAEDC2 /* FirstCell_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
