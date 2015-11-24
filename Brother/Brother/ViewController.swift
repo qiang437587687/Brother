@@ -34,6 +34,7 @@ class ViewController: UIViewController {
             let Arr = self.Json!["data"]["items"][0]["hospital_id"] //这样能直接取出来了
             print("------> \(Arr)")
             
+            
 //            self.jsonValue = JSON(Response.data!)
         }
         
