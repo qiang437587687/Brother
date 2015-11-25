@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Alamofire
+import Alamofire //还是没有找到一个能全局包含的方法~
 
 //这里面能直接写一个全局的变量的
 
