@@ -18,11 +18,19 @@ public enum Plent:Int {
     case Venuss
 }
 
-public enum BarCodeWithType<value,Error:ErrorType> {
+public enum BarCodeWithType<Value,Error:ErrorType> {
     
-    case Success(value)
+    case Success(Value)
     case Failure(Error)
     
+}
+
+indirect enum ADDAction { // indirect这个参数代表这个枚举能够进行递归搞作. 也能只是加载 case 的其中一个项目中.
+    
+    case Number(Int)
+    case Add(ADDAction,ADDAction)
+    case Multiplication(ADDAction,ADDAction)
+
 }
 
 class EnumTest {
@@ -53,9 +61,38 @@ class EnumTest {
         let earthOrder = Plent.Earth.rawValue
         print(earthOrder) //这样就能取出对应的初始值了
         
+        let possiblePlanet = Plent(rawValue: 2)
+        let possiblePlanet1 = Plent(rawValue: 10)
         
-//        var codeTest : BarCodeWithType =
+        print(possiblePlanet) //Optional(Brother.Plent.Venus)
+        print(possiblePlanet!) //Venus
+        print(possiblePlanet1) //nil
+//        print(possiblePlanet1!) //崩溃
         
+        let five = ADDAction.Number(5) //一个小的递归例子
+        let four = ADDAction.Number(4)
+        let sum = ADDAction.Add(five, four)
+        let product = ADDAction.Multiplication(sum, ADDAction.Number(2))
+        
+        func evalute(expression : ADDAction) -> Int {
+            switch expression {
+            case .Number(let value):
+                return value
+            case .Add(let left, let right):
+                return evalute(left) + evalute(right)
+            case .Multiplication(let left, let right):
+                return evalute(left) * evalute(right)
+            }
+            
+        }
+        print(evalute(product))
+        
+//        public let result: Result<Value, Error>
+        //BarCodeWithType  test
+        //public let result: Result<Value, Error>
+//        let enmuType = BarCodeWithType.Success("string") //这块还是没弄明白~ Fuck
+//        let enmuTypee = BarCodeWithType.Failure(nil)
+//        
         
         print("enum test end")
 
