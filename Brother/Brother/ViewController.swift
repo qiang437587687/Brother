@@ -49,8 +49,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let enmuTest = EnumTest()
         enmuTest.test()
         
+        let Generics = GenericsTest()
+        Generics.test()
+        
+        let Properties = PropertiesTest()
+        Properties.test()
         
     }
+    
+    
+    
     
     func configViews() {
  
@@ -78,6 +86,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
 //            self.jsonValue = JSON(Response.data!)
         }
+        
         
         Alamofire.request(.POST, "http://api.youaiyihu.com/v5/workers",parameters: nil).responseData { (Response) -> Void in
             

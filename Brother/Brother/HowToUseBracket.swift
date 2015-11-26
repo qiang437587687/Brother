@@ -84,6 +84,7 @@ class HowToUseBracket {
     {
             dispatch_async(queue ?? dispatch_get_main_queue()) {
                 
+                ///!!!! 这里面的<T.SerializedObject, T.ErrorObject>这个还没弄明白呢
                 let response = Response<T.SerializedObject, T.ErrorObject>(request: nil, response: nil, data: nil, result: nil)
                 
                 completionHandler(response)

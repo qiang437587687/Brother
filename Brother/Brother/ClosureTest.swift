@@ -10,6 +10,7 @@ import UIKit
 
 class ClosureTest {
 
+    let a = 2
     
     func someFunction(NeedClosure:(s1 : String)->String) {
         //            print("in Func \(s1)")
@@ -73,10 +74,7 @@ class ClosureTest {
 //        }
         
         
-        
-        
         //下面测试一下colsure
-        
         
         print("closure Test End")
     }
