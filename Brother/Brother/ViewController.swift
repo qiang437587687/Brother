@@ -55,6 +55,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let Properties = PropertiesTest()
         Properties.test()
         
+        let structt = StructTest()
+        structt.test()
+        
     }
     
     

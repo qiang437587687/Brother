@@ -87,6 +87,14 @@ class EnumTest {
         }
         print(evalute(product))
         
+        //这个终于是看到了这个类型的用法了  谢谢我自己~ 这个定义在结构体里面
+        let h : Marry<String,String> = Marry.han("zhang")
+        let z : Marry<Int,String> = Marry.zhang(3)
+        
+        print(h,h.isSuccess)
+        print(z,z.isSuccess)
+        
+        
 //        public let result: Result<Value, Error>
         //BarCodeWithType  test
         //public let result: Result<Value, Error>

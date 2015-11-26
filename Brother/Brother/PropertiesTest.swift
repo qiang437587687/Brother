@@ -86,6 +86,7 @@ class PropertiesTest {
         print(d)
         
 //        c = 5
+        
         print(b)
         c = 10
         print(b)
