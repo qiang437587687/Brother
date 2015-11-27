@@ -36,7 +36,7 @@ enum Marry <Male,Female> {
     
     case han(ErrorObjectFemale) //这个后面其实是类型
     //    let request:NSURLRequest? //枚举里面不能有 任何的存储类型..
-    public var isSuccess: Bool {
+    internal var isSuccess: Bool {
         
         switch self {
             

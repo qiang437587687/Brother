@@ -58,6 +58,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let structt = StructTest()
         structt.test()
         
+        let extensionn = ExtensionTest()
+        extensionn.test()
+     
+        let protocoll = ProtocolTest()
+        protocoll.test()
+        
     }
     
     
