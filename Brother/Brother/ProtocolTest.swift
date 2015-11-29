@@ -150,7 +150,6 @@ class DiceGameTracker:DiceGameDelegate {
         
         //这个里面的类其实就是上面的那个类
        // game.dice = Dice() //好的这个地方果然就映证了上面的那个 {get} 其实真的是一个Read-Only类型的
-        
         print("Game Start")
         
     }
