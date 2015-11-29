@@ -30,8 +30,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         loadData()
         configViews()
         otherControllerTest()
-        
-        
     }
 
     func otherControllerTest() {
