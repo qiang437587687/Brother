@@ -22,8 +22,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var Json : JSON?
     var dataArr = [JSON]()
     
-    
-    
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +30,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         otherControllerTest()
     }
 
+    deinit { // NOTE: This is like -dealloc in Objective-C
+        print("Deinit")
+    }
+    
     func otherControllerTest() {
         
         let how = HowToUseBracket()
