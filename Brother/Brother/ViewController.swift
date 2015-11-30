@@ -62,6 +62,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let protocoll = ProtocolTest()
         protocoll.test()
         
+        let moreOptional = MoreOptional()
+        moreOptional.test()
+        
+        let typecasting = TypeCastingTest()
+        typecasting.test()
+        
+        let whereTest = WhereTest()
+        whereTest.test()
+        
     }
     
     

@@ -13,6 +13,10 @@
 		1F20A3F91C05920500CAA79D /* ClosureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20A3F81C05920500CAA79D /* ClosureTest.swift */; };
 		1F20A3FB1C05AA7400CAA79D /* EnumTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20A3FA1C05AA7400CAA79D /* EnumTest.swift */; };
 		1F2709A71C06DB4F00F0D514 /* PropertiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2709A61C06DB4F00F0D514 /* PropertiesTest.swift */; };
+		1F406C541C0BF6E300FAAE06 /* MoreOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F406C531C0BF6E300FAAE06 /* MoreOptional.swift */; };
+		1F406C561C0C036E00FAAE06 /* TypeCastingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F406C551C0C036E00FAAE06 /* TypeCastingTest.swift */; };
+		1F406C581C0C380500FAAE06 /* WhereTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F406C571C0C380500FAAE06 /* WhereTest.swift */; };
+		1F406C5A1C0C454C00FAAE06 /* Pointself.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F406C591C0C454C00FAAE06 /* Pointself.swift */; };
 		1F5FD3A51C05841A0050B790 /* HowToUseBracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD3A41C05841A0050B790 /* HowToUseBracket.swift */; };
 		1F9641FF1C06A8A7000718EF /* GenericsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9641FE1C06A8A7000718EF /* GenericsTest.swift */; };
 		1FF1D8521C042F9500DAEDC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1D8511C042F9500DAEDC2 /* AppDelegate.swift */; };
@@ -34,6 +38,10 @@
 		1F20A3F81C05920500CAA79D /* ClosureTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTest.swift; sourceTree = "<group>"; };
 		1F20A3FA1C05AA7400CAA79D /* EnumTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumTest.swift; sourceTree = "<group>"; };
 		1F2709A61C06DB4F00F0D514 /* PropertiesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesTest.swift; sourceTree = "<group>"; };
+		1F406C531C0BF6E300FAAE06 /* MoreOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptional.swift; sourceTree = "<group>"; };
+		1F406C551C0C036E00FAAE06 /* TypeCastingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCastingTest.swift; sourceTree = "<group>"; };
+		1F406C571C0C380500FAAE06 /* WhereTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereTest.swift; sourceTree = "<group>"; };
+		1F406C591C0C454C00FAAE06 /* Pointself.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pointself.swift; sourceTree = "<group>"; };
 		1F5FD3A41C05841A0050B790 /* HowToUseBracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToUseBracket.swift; sourceTree = "<group>"; };
 		1F9641FE1C06A8A7000718EF /* GenericsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericsTest.swift; sourceTree = "<group>"; };
 		1FF1D84E1C042F9500DAEDC2 /* Brother.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brother.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +91,10 @@
 				1F01A7BB1C072EC900CCADD4 /* StructTest.swift */,
 				1F08BC5B1C08580C00220C78 /* ExtensionTest.swift */,
 				1F08BC5D1C085B9C00220C78 /* ProtocolTest.swift */,
+				1F406C531C0BF6E300FAAE06 /* MoreOptional.swift */,
+				1F406C551C0C036E00FAAE06 /* TypeCastingTest.swift */,
+				1F406C571C0C380500FAAE06 /* WhereTest.swift */,
+				1F406C591C0C454C00FAAE06 /* Pointself.swift */,
 			);
 			name = "Extension&Test";
 			sourceTree = "<group>";
@@ -276,13 +288,17 @@
 				1FF1D8641C04316D00DAEDC2 /* GlobalFile.swift in Sources */,
 				1F08BC5C1C08580C00220C78 /* ExtensionTest.swift in Sources */,
 				1F5FD3A51C05841A0050B790 /* HowToUseBracket.swift in Sources */,
+				1F406C581C0C380500FAAE06 /* WhereTest.swift in Sources */,
 				1FF1D8541C042F9500DAEDC2 /* ViewController.swift in Sources */,
 				1FF1D8691C0465C800DAEDC2 /* FirstCell.swift in Sources */,
 				1F08BC5E1C085B9C00220C78 /* ProtocolTest.swift in Sources */,
+				1F406C541C0BF6E300FAAE06 /* MoreOptional.swift in Sources */,
 				1FF1D8521C042F9500DAEDC2 /* AppDelegate.swift in Sources */,
 				1F9641FF1C06A8A7000718EF /* GenericsTest.swift in Sources */,
+				1F406C561C0C036E00FAAE06 /* TypeCastingTest.swift in Sources */,
 				1F20A3F91C05920500CAA79D /* ClosureTest.swift in Sources */,
 				1F20A3FB1C05AA7400CAA79D /* EnumTest.swift in Sources */,
+				1F406C5A1C0C454C00FAAE06 /* Pointself.swift in Sources */,
 				1FF1D86C1C04664800DAEDC2 /* FirstCell_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

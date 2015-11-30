@@ -39,7 +39,6 @@ import UIKit
 
 class PropertiesTest {
 
-    
     var a : Int = 1 // 这样就算是一个存储 属性了吧  这个里面能用willset 和didset 方法来检测
     
     var b : Int = 2
@@ -49,6 +48,7 @@ class PropertiesTest {
         set (val){
             self.b = val - a
         }
+        
         get{
             return a + self.b
         }

@@ -192,7 +192,49 @@ protocol SomeClassOnlyPrortocol: class,DiceGame {
     
 }
 
+@objc protocol counterDataSource {
+    
+    optional func incrementForCount(count:Int) -> Int
+    optional var fixedIncrement: Int { get }
 
+}
+
+class Counter {
+    var count = 0
+    var dataSource: counterDataSource?
+    
+    func increment() {
+        if let amount = dataSource?.incrementForCount?(count) {
+            count += amount
+        } else if let amount = dataSource?.fixedIncrement {
+            count += amount
+        }
+    }
+}
+
+    /**
+     知识点: optional 类型的 protocol 就需要在满足的类上面添加上 NSObject 这个关键字 或者是 用@objc 修饰的类(这个可以看看swfter 2.0里面的介绍 用的不多 runtime 可能会用的比较多) 因为这个是需要满足是OC的类型才能使用的.
+    */
+
+class ThreeSource: NSObject,counterDataSource {
+    let fixedIncrement = 3
+}
+
+
+@objc class TowardsZeroSource: NSObject,counterDataSource {
+    
+    let fixedIncrement = 0
+    
+    func incrementForCount(count: Int) -> Int {
+        if count == 0 {
+            return 0
+        } else if count < 0 {
+            return 1
+        } else {
+            return -1
+        }
+    }
+}
 
 
 class ProtocolTest {
@@ -224,8 +266,6 @@ class ProtocolTest {
         game.play()
         
         
-        //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        
         let trackerExtension = DiceGameTrackerExtesion()
         game.delegate = trackerExtension
         game.play()
@@ -237,7 +277,24 @@ class ProtocolTest {
             
         }
 
+        let counter = Counter()
+        counter.dataSource = ThreeSource()
+//        counter.dataSource?.fixedIncrement = 2 // 这格式可选的 那么就不能重新设置了 但是初始化的时候 get 的是能设置的,也就是在这里设置的.
+        for _ in 1...4 {
+            counter.increment()
+            print(counter.count)
+        }
+        
+        
+        counter.count = -4
+        counter.dataSource = TowardsZeroSource()
+        for _ in 1...5 {
+            counter.increment()
+            print(counter.count)
+        }
+        
         print("ProtocolTest End")
+        
     }
     
 }
