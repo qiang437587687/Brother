@@ -75,13 +75,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //        let whereTest = WhereTest()
 //        whereTest.test()
         
-        let DynamicTypeT = DynamicTypeTest()
-        DynamicTypeT.test()
-        
+//        let DynamicTypeT = DynamicTypeTest()
+//        DynamicTypeT.test()
+//        
+
+        let SubscriptTestT = SubscriptTest()
+        SubscriptTestT.test()
     }
     
     
-
     func configViews() {
  
         self.tableView!.registerNib(UINib(nibName: "FirstCell_Test", bundle: nil), forCellReuseIdentifier: "FirstCellTest")
@@ -113,31 +115,22 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         Alamofire.request(.POST, "http://api.youaiyihu.com/v5/workers",parameters: nil).responseData { (Response) -> Void in
             
 //            print("要开始打印啦~~\(Response.data)")
-        
         }
         
         //
         
-        let  dic = ["zhang":"1","han":"2","xian":"3","xiu":["2","3","4","5"]]
-        
-        let jsonObject = JsonModelClass()
-        
-        jsonObject.setValuesForKeysWithDictionary(dic)
-        
-        print("zhang = \(jsonObject.zhang) han = \(jsonObject.han) qiang = \(jsonObject.qiang) xiu = \(jsonObject.xiu)")
-        
+        //这个地方使用一下 setValuesForKeysWithDictionary 这个方法来试验一下是不是能成功的转换(结果:转换是可以的也一直能用,但是这里面却不能直接转换出数组里面的model 以后可能还需要好好研究一下.)
+//        let  dic = ["zhang":"1","han":"2","xian":"3","xiu":["2","3","4","5"]]
+//        
+//        let jsonObject = JsonModelClass()
+//        
+//        jsonObject.setValuesForKeysWithDictionary(dic)
+//        
+//        print("zhang = \(jsonObject.zhang) han = \(jsonObject.han) qiang = \(jsonObject.qiang) xiu = \(jsonObject.xiu)")
+
     }
     
     //tabelview datasource && delegate
-    /*
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    
-    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-    
-    @available(iOS 2.0, *)
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    */
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 173
@@ -163,9 +156,5 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return Cell
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 

@@ -6,10 +6,12 @@
 //  Copyright © 2015年 zhang. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class JsonModelClass:NSObject {
+    
+    //这个Json 试验 而已 并没有实现对应的jsonModel
     
     var zhang:String = "6"
     var han:String = "5"
@@ -20,5 +22,7 @@ class JsonModelClass:NSObject {
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         print("value = \(value) key = \(key)")
     }
+    
+
     
 }

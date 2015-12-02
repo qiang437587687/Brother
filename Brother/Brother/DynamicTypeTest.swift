@@ -65,7 +65,7 @@ class DynamicTypeTest {
         
         let date = NSDate()
         
-        let name : AnyClass! = object_getClass(date) //这里面的 ! 它表明可以输入一个nil 并期待着返回一个nil
+        let name : AnyClass! = object_getClass(date) //这里面的 ! 它甚至可以表明可以输入一个nil 并期待着返回一个nil
         
         let name1 = date.dynamicType
         

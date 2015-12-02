@@ -6,7 +6,7 @@
 //  Copyright © 2015年 zhang. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class MediaItem {
@@ -36,6 +36,8 @@ class Song: MediaItem {
 class TypeCastingTest {
     
     func test() {
+        
+        print("TypeCastingTest Start")
         
         let library = [
             Movie(name: "Casablanca", director: "Michael Curtiz"),
@@ -89,6 +91,25 @@ class TypeCastingTest {
             print("moive \(moive.name) \(moive.director)")
         }
         
+        func test() {
+            
+            let zhang:String = "6"
+            let zhangT = zhang as NSString //简单的写一下字符串的转换.
+            let num : Double = zhangT.doubleValue
+            print(num)
+            
+            
+            let zhang1 : NSString = "123"
+            let label = UILabel()
+            label.text = zhang1 as String //label.text 里面接收的是String 然后直接转换 之后就能使用了
+            print(label.text)
+            
+            
+            let arr = Array<AnyObject>()
+            let arr1 = arr as NSArray
+            print(arr1) //这个里面做了 一个数组的转换.
+        }
+        print("TypeCastingTest End")
     }
     
 }
