@@ -28,6 +28,9 @@
 		1FF1D8691C0465C800DAEDC2 /* FirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1D8681C0465C800DAEDC2 /* FirstCell.swift */; };
 		1FF1D86C1C04664800DAEDC2 /* FirstCell_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1D86A1C04664800DAEDC2 /* FirstCell_Test.swift */; };
 		1FF1D86D1C04664800DAEDC2 /* FirstCell_Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF1D86B1C04664800DAEDC2 /* FirstCell_Test.xib */; };
+		1FF72ABC1C0E9C6D0067D95D /* JsonToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF72ABB1C0E9C6D0067D95D /* JsonToModel.swift */; };
+		1FF72ABE1C0EA04F0067D95D /* JsonModelInArr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF72ABD1C0EA04F0067D95D /* JsonModelInArr.swift */; };
+		1FF72AC01C0EAC0F0067D95D /* DynamicTypeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF72ABF1C0EAC0F0067D95D /* DynamicTypeTest.swift */; };
 		EBC1C5DE59BB8CB30F662E73 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A087ABE1367E80ED986C14B5 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		1FF1D8681C0465C800DAEDC2 /* FirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCell.swift; sourceTree = "<group>"; };
 		1FF1D86A1C04664800DAEDC2 /* FirstCell_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCell_Test.swift; sourceTree = "<group>"; };
 		1FF1D86B1C04664800DAEDC2 /* FirstCell_Test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstCell_Test.xib; sourceTree = "<group>"; };
+		1FF72ABB1C0E9C6D0067D95D /* JsonToModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonToModel.swift; sourceTree = "<group>"; };
+		1FF72ABD1C0EA04F0067D95D /* JsonModelInArr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonModelInArr.swift; sourceTree = "<group>"; };
+		1FF72ABF1C0EAC0F0067D95D /* DynamicTypeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicTypeTest.swift; sourceTree = "<group>"; };
 		61A33482C0216D929E30A4D7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		72DFD031EF734321884E45F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A087ABE1367E80ED986C14B5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +101,9 @@
 				1F406C551C0C036E00FAAE06 /* TypeCastingTest.swift */,
 				1F406C571C0C380500FAAE06 /* WhereTest.swift */,
 				1F406C591C0C454C00FAAE06 /* Pointself.swift */,
+				1FF72ABF1C0EAC0F0067D95D /* DynamicTypeTest.swift */,
+				1FF72ABB1C0E9C6D0067D95D /* JsonToModel.swift */,
+				1FF72ABD1C0EA04F0067D95D /* JsonModelInArr.swift */,
 			);
 			name = "Extension&Test";
 			sourceTree = "<group>";
@@ -287,8 +296,11 @@
 				1F2709A71C06DB4F00F0D514 /* PropertiesTest.swift in Sources */,
 				1FF1D8641C04316D00DAEDC2 /* GlobalFile.swift in Sources */,
 				1F08BC5C1C08580C00220C78 /* ExtensionTest.swift in Sources */,
+				1FF72ABC1C0E9C6D0067D95D /* JsonToModel.swift in Sources */,
 				1F5FD3A51C05841A0050B790 /* HowToUseBracket.swift in Sources */,
 				1F406C581C0C380500FAAE06 /* WhereTest.swift in Sources */,
+				1FF72AC01C0EAC0F0067D95D /* DynamicTypeTest.swift in Sources */,
+				1FF72ABE1C0EA04F0067D95D /* JsonModelInArr.swift in Sources */,
 				1FF1D8541C042F9500DAEDC2 /* ViewController.swift in Sources */,
 				1FF1D8691C0465C800DAEDC2 /* FirstCell.swift in Sources */,
 				1F08BC5E1C085B9C00220C78 /* ProtocolTest.swift in Sources */,

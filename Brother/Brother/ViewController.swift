@@ -36,48 +36,52 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func otherControllerTest() {
         
-        let how = HowToUseBracket()
-        how.test()
+    /**********下面的这些需要哪个就打开哪个好了***********/
         
-        ClosureTest.test()//直接用类方法
-        let Closure = ClosureTest() //闭包用法
-        Closure.someFunction { (s1) -> String in
-            print("some in somFunc \(s1)")
-            return s1 + "dabao in Main"
-        }
+//        let how = HowToUseBracket()
+//        how.test()
+//        
+//        ClosureTest.test()//直接用类方法
+//        let Closure = ClosureTest() //闭包用法
+//        Closure.someFunction { (s1) -> String in
+//            print("some in somFunc \(s1)")
+//            return s1 + "dabao in Main"
+//        }
+//        
+//        let enmuTest = EnumTest()
+//        enmuTest.test()
+//        
+//        let Generics = GenericsTest()
+//        Generics.test()
+//        
+//        let Properties = PropertiesTest()
+//        Properties.test()
+//        
+//        let structt = StructTest()
+//        structt.test()
+//        
+//        let extensionn = ExtensionTest()
+//        extensionn.test()
+//     
+//        let protocoll = ProtocolTest()
+//        protocoll.test()
+//        
+//        let moreOptional = MoreOptional()
+//        moreOptional.test()
+//        
+//        let typecasting = TypeCastingTest()
+//        typecasting.test()
+//        
+//        let whereTest = WhereTest()
+//        whereTest.test()
         
-        let enmuTest = EnumTest()
-        enmuTest.test()
-        
-        let Generics = GenericsTest()
-        Generics.test()
-        
-        let Properties = PropertiesTest()
-        Properties.test()
-        
-        let structt = StructTest()
-        structt.test()
-        
-        let extensionn = ExtensionTest()
-        extensionn.test()
-     
-        let protocoll = ProtocolTest()
-        protocoll.test()
-        
-        let moreOptional = MoreOptional()
-        moreOptional.test()
-        
-        let typecasting = TypeCastingTest()
-        typecasting.test()
-        
-        let whereTest = WhereTest()
-        whereTest.test()
+        let DynamicTypeT = DynamicTypeTest()
+        DynamicTypeT.test()
         
     }
     
     
-    
-    
+
     func configViews() {
  
         self.tableView!.registerNib(UINib(nibName: "FirstCell_Test", bundle: nil), forCellReuseIdentifier: "FirstCellTest")
@@ -92,7 +96,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //            print(Response.data)
 //            print(Response.request)
 //            print(Response.response)
-        
+            
             self.Json = JSON(data:Response.data!) //这个地方接收的是data类型的数据 不能是json类型的么??
             let Arr = self.Json!["data"]["items"].arrayValue //这样能直接取出来了
             
@@ -111,6 +115,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //            print("要开始打印啦~~\(Response.data)")
         
         }
+        
+        //
+        
+        let  dic = ["zhang":"1","han":"2","xian":"3","xiu":["2","3","4","5"]]
+        
+        let jsonObject = JsonModelClass()
+        
+        jsonObject.setValuesForKeysWithDictionary(dic)
+        
+        print("zhang = \(jsonObject.zhang) han = \(jsonObject.han) qiang = \(jsonObject.qiang) xiu = \(jsonObject.xiu)")
+        
     }
     
     //tabelview datasource && delegate
