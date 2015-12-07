@@ -24,8 +24,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet var tableView: UITableView!
     
-    
     @IBAction func animationAction(sender: UIButton) {
+        print("button Action")
+    }
+    
+//    @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+//        print(unwindSegue)
+//        print(subsequentVC)
+//
+//    }
+       /**
+     知识点: 实现这个函数 @IBAction 和 UIStoryboardSegue 这两个参数 之后 就能用storyBoard 里面的Exit按钮来连接
+    */
+    @IBAction func backFromSubViewController(unwindSegue: UIStoryboardSegue,towardsViewController subsequentVC: UIViewController) {
+        //在这里是连接回来的函数
     }
     
     override func viewDidLoad() {
