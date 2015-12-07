@@ -23,6 +23,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var dataArr = [JSON]()
     
     @IBOutlet var tableView: UITableView!
+    
+    
+    @IBAction func animationAction(sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -77,8 +82,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
 //        let DynamicTypeT = DynamicTypeTest()
 //        DynamicTypeT.test()
-//        
-
+//
         let SubscriptTestT = SubscriptTest()
         SubscriptTestT.test()
     }

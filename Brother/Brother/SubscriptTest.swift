@@ -28,7 +28,6 @@ struct SomeStruct {
             }
             
             return "1234567890"
-            
         }
         
         set {
@@ -40,7 +39,6 @@ struct SomeStruct {
     }
     
 }
-
 
 class SubscriptTest {
     
