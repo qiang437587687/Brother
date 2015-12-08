@@ -95,8 +95,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //        let DynamicTypeT = DynamicTypeTest()
 //        DynamicTypeT.test()
 //
-        let SubscriptTestT = SubscriptTest()
-        SubscriptTestT.test()
+//        let SubscriptTestT = SubscriptTest()
+//        SubscriptTestT.test()
+
+        let manager1 = MyManager.sharedInstance
+        let manager2 = MyManager.sharedInstance
+        print(manager1) //lldb p (Brother.MyManager) $R1 = 0x00007ffd2bf55b40 {}
+        print(manager2) //lldb p (Brother.MyManager) $R1 = 0x00007ffd2bf55b40 {}
     }
     
     

@@ -229,11 +229,11 @@ class bezierPath:UIViewController {
         
 //        MyCanvasRadius()
         
-//        MyCanvasLetf()
+        MyCanvasLetf()
         
 //        MyCanvasRight()
         
-        MyCanvasMyCircle()
+//        MyCanvasMyCircle()
         
         
         print("animation View Test End")
