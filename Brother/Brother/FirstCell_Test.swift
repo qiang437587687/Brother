@@ -14,6 +14,8 @@ class FirstCell_Test: UITableViewCell {
 
     @IBOutlet weak var hospital: UILabel!
     
+    @IBOutlet weak var headerImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

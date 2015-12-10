@@ -92,8 +92,7 @@ class HowToUseBracket {
         
         return self
     }
-    
-    
+
     func test() -> () {
         
         print("开始测试")

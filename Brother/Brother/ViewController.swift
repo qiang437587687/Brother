@@ -15,6 +15,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
+
 
 //这个是马上要请求的接口 http://api.youaiyihu.com/v5/workers
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
@@ -27,13 +29,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBAction func animationAction(sender: UIButton) {
         print("button Action")
     }
+    @IBOutlet weak var timingLabel: UILabel!
     
 //    @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
 //        print(unwindSegue)
 //        print(subsequentVC)
 //
 //    }
-       /**
+   /**
      知识点: 实现这个函数 @IBAction 和 UIStoryboardSegue 这两个参数 之后 就能用storyBoard 里面的Exit按钮来连接
     */
     @IBAction func backFromSubViewController(unwindSegue: UIStoryboardSegue,towardsViewController subsequentVC: UIViewController) {
@@ -44,16 +47,31 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         loadData()
         configViews()
+        tempTest()
+        
+        
+        let start = CACurrentMediaTime()
         otherControllerTest()
+        let end = CACurrentMediaTime()
+        timingLabel.text = "执行这个函数需要的时间: \((end - start) * 1000)ms"
+
     }
 
     deinit { // NOTE: This is like -dealloc in Objective-C
         print("Deinit")
     }
     
+    
+    func tempTest() {
+        //        Array;
+        //          var arr = [NSNumber](count: 3, repeatedValue:@(.0f)) swift 中貌似不能这么玩啊
+    }
+    
+    
     func otherControllerTest() {
         
     /**********下面的这些需要哪个就打开哪个好了***********/
+
         
 //        let how = HowToUseBracket()
 //        how.test()
@@ -98,10 +116,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //        let SubscriptTestT = SubscriptTest()
 //        SubscriptTestT.test()
 
-        let manager1 = MyManager.sharedInstance
-        let manager2 = MyManager.sharedInstance
-        print(manager1) //lldb p (Brother.MyManager) $R1 = 0x00007ffd2bf55b40 {}
-        print(manager2) //lldb p (Brother.MyManager) $R1 = 0x00007ffd2bf55b40 {}
+//        let manager1 = MyManager.sharedInstance
+//        let manager2 = MyManager.sharedInstance
+//        print(manager1) //lldb p (Brother.MyManager) $R1 = 0x00007ffd2bf55b40 {}
+//        print(manager2) //lldb p (Brother.MyManager) $R1 = 0x00007ffd2bf55b40 {}
+        
     }
     
     
@@ -173,6 +192,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         Cell.name.text = subJson["name"].stringValue
 
         Cell.hospital.text = subJson["hospital_id"].stringValue
+        
+        let url : NSURL = NSURL(string: subJson["pic"].stringValue)!
+        
+        //使用kf来代替原来OC的SDWebImage的图片加载功能
+        Cell.headerImageView.kf_setImageWithURL(url, placeholderImage: UIImage(named: "BrotherPic"))
         
         return Cell
     }
