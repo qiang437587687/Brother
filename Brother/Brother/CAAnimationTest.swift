@@ -49,8 +49,8 @@ class CAAnimationTest: UIViewController {
         kfAnimation.repeatCount=MAXFLOAT;
         kfAnimation.fillMode=kCAFillModeForwards;
         kfAnimation.removedOnCompletion = false;
-        
 //        29     keyAnima.values=@[@(-angle2Radian(4)),@(angle2Radian(4)),@(-angle2Radian(4))];
+        
         kfAnimation.values = [-angleTransfrom(4),angleTransfrom(4),-angleTransfrom(4)]
         self.viewAnimation.layer.addAnimation(kfAnimation, forKey:"sharkAnimation")
     

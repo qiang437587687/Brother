@@ -24,8 +24,34 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var Json : JSON?
     var dataArr = [JSON]()
     
-    @IBOutlet var tableView: UITableView!
     
+    /*
+    
+    //添加一个alert
+    
+    */
+    func showEventsAcessDeniedAlert() {
+        let alertController = UIAlertController(title: "打开设置测试",
+            message: "The calendar permission was not authorized. Please enable it in Settings to continue.",
+            preferredStyle: .ActionSheet)  // 这个地方的展现形式可以使 alert~~~~
+        let settingsAction = UIAlertAction(title: "Settings", style: .Default) { (alertAction) in
+            // THIS IS WHERE THE MAGIC HAPPENS!!!!
+            if let appSettings = NSURL(string: UIApplicationOpenSettingsURLString) {
+                UIApplication.sharedApplication().openURL(appSettings)
+            }
+        }
+        alertController.addAction(settingsAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func alertButton(sender: AnyObject) {
+        self.showEventsAcessDeniedAlert()
+    }
+    
+    @IBOutlet var tableView: UITableView!
+
     @IBAction func animationAction(sender: UIButton) {
         print("button Action")
     }
